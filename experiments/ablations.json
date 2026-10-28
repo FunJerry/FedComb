@@ -1,0 +1,17 @@
+{
+  "base": "../configs/paper.json",
+  "seeds": [42, 43, 44],
+  "variants": [
+    {"name": "full_method", "overrides": {}},
+    {"name": "no_distillation", "overrides": {"distillation.mode": "none"}},
+    {"name": "head_only", "overrides": {"distillation.mode": "head"}},
+    {"name": "tail_only", "overrides": {"distillation.mode": "tail"}},
+    {"name": "fixed_lambda", "overrides": {"distillation.weight_mode": "fixed", "distillation.fixed_weight": 1}},
+    {"name": "random_allocation", "overrides": {"allocation.policy": "random"}},
+    {"name": "greedy_allocation", "overrides": {"allocation.policy": "greedy"}},
+    {"name": "no_resource_term", "overrides": {"allocation.resource_weight": 0}},
+    {"name": "no_maturity_term", "overrides": {"allocation.maturity_weight": 0}},
+    {"name": "no_coverage_term", "overrides": {"allocation.coverage_weight": 0}},
+    {"name": "static_resources", "overrides": {"environment.change_probability": 0}}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "base": "../configs/smoke.json",
+  "seeds": [42, 43],
+  "variants": [
+    {"name": "adaptive", "overrides": {}},
+    {"name": "no_distillation", "overrides": {"distillation.mode": "none"}},
+    {"name": "head_only", "overrides": {"distillation.mode": "head", "distillation.weight_mode": "fixed"}},
+    {"name": "tail_only", "overrides": {"distillation.mode": "tail", "distillation.weight_mode": "fixed"}},
+    {"name": "random", "overrides": {"allocation.policy": "random"}},
+    {"name": "random_ipc", "overrides": {"allocation.policy": "random_feasible", "aggregation.method": "ipc", "environment.reporting": "fresh"}},
+    {"name": "greedy", "overrides": {"allocation.policy": "greedy"}},
+    {"name": "fixed", "overrides": {"allocation.policy": "fixed"}},
+    {"name": "fedavg_drop", "overrides": {"allocation.policy": "full", "distillation.mode": "none", "aggregation.old_weight": 0}}
+  ]
+}

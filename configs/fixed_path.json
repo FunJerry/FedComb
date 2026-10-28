@@ -1,0 +1,6 @@
+{
+  "experiment": {"name": "fixed_path"},
+  "allocation": {"policy": "fixed", "fixed_start": 3, "fixed_end": 6},
+  "distillation": {"weight_mode": "fixed", "fixed_weight": 1},
+  "environment": {"memory_min_mb": 120, "memory_max_mb": 120}
+}

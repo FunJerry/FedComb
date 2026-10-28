@@ -1,0 +1,82 @@
+{
+  "experiment": {
+    "name": "day6_none_10r",
+    "seed": 42,
+    "device": "auto",
+    "threads": 2
+  },
+  "data": {
+    "dataset": "cifar10",
+    "samples_per_client": 100,
+    "batch_size": 20,
+    "dirichlet_alpha": 0.5,
+    "input_size": 32,
+    "download": false
+  },
+  "model": {
+    "width": 64,
+    "classes": 10,
+    "drop_path": 0.05,
+    "classifier_dropout": 0.0
+  },
+  "federation": {
+    "clients": 4,
+    "participants": 2,
+    "rounds": 10,
+    "checkpoint_every": 2
+  },
+  "training": {
+    "local_epochs": 1,
+    "learning_rate": 0.1,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "decay": 0.85,
+    "decay_rounds": 100
+  },
+  "distillation": {
+    "mode": "none",
+    "weight_mode": "fixed",
+    "fixed_weight": 1.0,
+    "learning_rate": 0.005,
+    "temperature": 2.0
+  },
+  "allocation": {
+    "policy": "fixed",
+    "min_shards": 3,
+    "fixed_start": 3,
+    "fixed_end": 6,
+    "resource_weight": 1.0,
+    "maturity_weight": 2.0,
+    "coverage_weight": 6.0,
+    "time_weight": 3.0,
+    "max_comm_seconds": null,
+    "max_compute_seconds": null
+  },
+  "aggregation": {
+    "method": "mean",
+    "old_weight": 0.1,
+    "ipc_learning_rate": 0.1
+  },
+  "progress": {
+    "aux_count_weight": 0.5,
+    "eta": 0.5,
+    "ema_old_weight": 0.1,
+    "coverage_target": 0.5,
+    "utilization_target": 0.95,
+    "time_ema_old_weight": 0.9
+  },
+  "environment": {
+    "memory_min_mb": 120,
+    "memory_max_mb": 120,
+    "compute_min_gflops": 3.0,
+    "compute_max_gflops": 12.5,
+    "bandwidth_min_mbps": 1.0,
+    "bandwidth_max_mbps": 50.0,
+    "change_probability": 0.0,
+    "memory_fluctuation": 0.2,
+    "compute_fluctuation": 0.3,
+    "bandwidth_fluctuation": 0.25,
+    "report_threshold": 0.1,
+    "reporting": "event"
+  }
+}

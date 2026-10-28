@@ -1,0 +1,8 @@
+{
+  "experiment": {"name": "smoke", "seed": 42, "device": "cpu"},
+  "data": {"dataset": "synthetic", "samples_per_client": 8, "batch_size": 4},
+  "model": {"width": 4, "classes": 3, "drop_path": 0},
+  "federation": {"clients": 4, "participants": 2, "rounds": 2, "checkpoint_every": 2},
+  "training": {"local_epochs": 1},
+  "environment": {"memory_min_mb": 0.1, "memory_max_mb": 0.3}
+}

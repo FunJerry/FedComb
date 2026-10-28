@@ -1,0 +1,15 @@
+# 本次 CPU 验证环境实际安装版本。完整环境另记录于 docs/验证记录.md。
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.5.4
+filelock==4.1.1
+typing_extensions==4.16.0
+setuptools==84.0.0
+sympy==1.14.0
+networkx==3.7
+Jinja2==3.1.6
+fsspec==2026.9.0
+pillow==12.3.0
+mpmath==1.3.0
+MarkupSafe==3.0.4
+scipy==1.18.1

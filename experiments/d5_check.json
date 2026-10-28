@@ -1,0 +1,18 @@
+{
+  "base": "../configs/day5_check.json",
+  "seeds": [42],
+  "variants": [
+    {
+      "name": "none",
+      "overrides": {"distillation.mode": "none"}
+    },
+    {
+      "name": "head",
+      "overrides": {"distillation.mode": "head"}
+    },
+    {
+      "name": "tail",
+      "overrides": {"distillation.mode": "tail"}
+    }
+  ]
+}

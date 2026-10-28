@@ -1,0 +1,8 @@
+{
+  "base": "../configs/paper.json",
+  "seeds": [42, 43, 44],
+  "variants": [
+    {"name": "random_gradient", "overrides": {"allocation.policy": "random_feasible", "environment.reporting": "fresh", "aggregation.method": "gradient_mean"}},
+    {"name": "random_ipc", "overrides": {"allocation.policy": "random_feasible", "environment.reporting": "fresh", "aggregation.method": "ipc"}}
+  ]
+}

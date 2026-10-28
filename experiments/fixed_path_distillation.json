@@ -1,0 +1,9 @@
+{
+  "base": "../configs/fixed_path.json",
+  "seeds": [42, 43, 44],
+  "variants": [
+    {"name": "fixed_path_none", "overrides": {"allocation.policy": "fixed", "distillation.mode": "none"}},
+    {"name": "fixed_path_head", "overrides": {"allocation.policy": "fixed", "distillation.mode": "head"}},
+    {"name": "fixed_path_tail", "overrides": {"allocation.policy": "fixed", "distillation.mode": "tail"}}
+  ]
+}

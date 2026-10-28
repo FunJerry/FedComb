@@ -1,0 +1,12 @@
+{
+  "experiment": {"name": "fedcomb", "seed": 42, "device": "cuda", "threads": 4},
+  "data": {"dataset": "cifar10", "samples_per_client": 500, "batch_size": 100, "dirichlet_alpha": 0.5, "download": false},
+  "model": {"width": 64, "classes": 10, "drop_path": 0.05},
+  "federation": {"clients": 100, "participants": 10, "rounds": 1000, "checkpoint_every": 50},
+  "training": {"local_epochs": 5},
+  "distillation": {"mode": "adaptive", "weight_mode": "adaptive", "temperature": 2},
+  "aggregation": {"method": "mean", "old_weight": 0.1},
+  "allocation": {"policy": "dynamic", "min_shards": 3},
+  "environment": {"reporting": "event", "change_probability": 0.2,
+    "memory_fluctuation": 0.2, "compute_fluctuation": 0.3, "bandwidth_fluctuation": 0.25}
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedcomb-experiments"
+version = "0.1.0"
+description = "Readable FedComb experiment and ablation engine"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2,<3", "torchvision>=0.17,<1", "numpy>=1.26,<3", "scipy>=1.11,<2"]
+
+[project.scripts]
+fedcomb = "fedcomb.cli:main"
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
